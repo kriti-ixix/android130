@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,15 +16,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Registering the components
+        // Registering all the components
         Button button = findViewById(R.id.button);
-        TextView text = findViewById(R.id.textView);
+        TextView textView = findViewById(R.id.textView);
+        EditText editText = findViewById(R.id.editText);
 
-        // Code for whenever button is clicked
+        // Code that will run whenever you click on the button
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                text.setText("Button is now clicked!");
+                String name = editText.getText().toString();
+                textView.setText("Hi " + name + "!");
             }
         });
     }
