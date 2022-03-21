@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -13,7 +14,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 
-public class FileInput extends AppCompatActivity {
+public class FileInput extends AppCompatActivity implements View.OnClickListener{
 
     EditText editText;
     Button readButton, saveButton;
@@ -28,8 +29,11 @@ public class FileInput extends AppCompatActivity {
         readButton = findViewById(R.id.readFileButton);
         saveButton = findViewById(R.id.saveFileButton);
 
-        readButton.setOnClickListener(buttonListener);
-        saveButton.setOnClickListener(buttonListener);
+//        readButton.setOnClickListener(buttonListener);
+//        saveButton.setOnClickListener(buttonListener);
+
+        readButton.setOnClickListener(this);
+        saveButton.setOnClickListener(this);
     }
 
     View.OnClickListener buttonListener = new View.OnClickListener() {
@@ -63,6 +67,7 @@ public class FileInput extends AppCompatActivity {
                     String content = editText.getText().toString();
                     bufferedWriter.write(content);
                     bufferedWriter.flush();
+                    Toast.makeText(FileInput.this, "File saved", Toast.LENGTH_LONG).show();
                 }
             }
             catch (Exception e)
@@ -71,4 +76,43 @@ public class FileInput extends AppCompatActivity {
             }
         }
     };
+
+    @Override
+    public void onClick(View view) {
+        int id = view.getId();
+
+        try
+        {
+            if (id == R.id.readFileButton)
+            {
+                File file = new File(this.getFilesDir() + "/" + FILENAME);
+                FileReader fileReader = new FileReader(file);
+                BufferedReader bufferedReader = new BufferedReader(fileReader);
+                String x = "", y;
+
+                while ((y = bufferedReader.readLine()) != null)
+                {
+                    x += y;
+                    x += "\n";
+                }
+
+                editText.setText(x);
+
+            }
+            else if (id == R.id.saveFileButton)
+            {
+                File file = new File(this.getFilesDir() + "/" + FILENAME);
+                FileWriter fileWriter = new FileWriter(file);
+                BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+                String content = editText.getText().toString();
+                bufferedWriter.write(content);
+                bufferedWriter.flush();
+                Toast.makeText(FileInput.this, "File saved", Toast.LENGTH_LONG).show();
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
 }
