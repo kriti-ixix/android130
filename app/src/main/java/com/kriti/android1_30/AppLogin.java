@@ -2,6 +2,7 @@ package com.kriti.android1_30;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -38,6 +39,9 @@ public class AppLogin extends AppCompatActivity {
                 editor.putString("username", username);
                 editor.putString("email", email);
                 editor.apply();
+
+                Intent in = new Intent(AppLogin.this, AppHome.class);
+                startActivity(in);
             }
         });
     }
