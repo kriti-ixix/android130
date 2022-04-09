@@ -6,30 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".StudentSignUp">
 
-    <RadioGroup
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_centerInParent="true">
 
-        <RadioButton
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/insertRollNo"
+            android:hint="Enter roll no"
+            android:inputType="number"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/insertName"
+            android:hint="Enter name"/>
+
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radioMale"
-            android:text="Male"/>
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:layout_width="wrap_content"
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioMale"
+                android:text="Male"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioFemale"
+                android:text="Female"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioTrans"
+                android:text="Transgender"/>
+
+        </RadioGroup>
+
+        <Button
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/radioFemale"
-            android:text="Female"/>
+            android:text="Sign Up"
+            android:layout_margin="10dp"
+            android:id="@+id/insertButton"/>
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioTrans"
-            android:text="Transgender"/>
-
-    </RadioGroup>
+    </LinearLayout>
 
 </RelativeLayout>
