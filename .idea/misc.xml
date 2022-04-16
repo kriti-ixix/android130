@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/button_bg.xml" value="0.1735" />
         <entry key="app/src/main/res/drawable/edit_text_bg.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.17" />
         <entry key="app/src/main/res/layout/activity_add_info.xml" value="0.23777173913043478" />
         <entry key="app/src/main/res/layout/activity_app_home.xml" value="0.20878623188405798" />
         <entry key="app/src/main/res/layout/activity_app_login.xml" value="0.2441123188405797" />
