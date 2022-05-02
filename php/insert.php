@@ -1,9 +1,10 @@
 <?php
 
-// $name = $_POST["name"]; $roll_no = $_POST["roll_no"];
-// $gender = $_POST["gender"]; $marks = $_POST["marks"];
+$name = $_POST["name"];
+$gender = $_POST["gender"]; 
+$marks = $_POST["marks"];
 
-$name = "XYZ"; $roll_no = 1; $gender = "F"; $marks = 50;
+// $name = "XYZ"; $gender = "F"; $marks = 50;
 $result;
 
 // address, username, password, database
@@ -12,7 +13,7 @@ $connection = mysqli_connect("localhost", "root", "", "android_demo");
 if ($connection)
 {
     // echo "Connection successful <br>";
-    $query = "insert into students values ($roll_no, '$name', '$gender', $marks)";
+    $query = "insert into students values (null, '$name', '$gender', $marks)";
     $response = mysqli_query($connection, $query);
 
     if ($response == 0)
