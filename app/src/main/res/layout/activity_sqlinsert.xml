@@ -18,6 +18,8 @@
             android:id="@+id/sqlName"
             android:hint="Enter your name"
             android:ems="15"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="5dp"
             android:layout_gravity="center"/>
 
         <EditText
@@ -26,6 +28,8 @@
             android:id="@+id/sqlMarks"
             android:hint="Enter your marks"
             android:ems="15"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawablePadding="5dp"
             android:inputType="numberDecimal"
             android:layout_gravity="center"/>
 
