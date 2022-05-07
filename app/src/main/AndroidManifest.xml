@@ -10,8 +10,17 @@
         android:label="My Test App"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Android130">
+        android:theme="@style/Theme.Android130"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".SQLSelect"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".SQLInsert"
             android:exported="true">
