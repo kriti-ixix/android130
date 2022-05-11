@@ -89,6 +89,16 @@ public class Movies extends AppCompatActivity {
             Log.d(tag, "onBindViewHolder");
             String movie = moviesList.get(position);
             holder.textView.setText(movie);
+
+            if (position % 2 == 0)
+            {
+                holder.imageView.setImageResource(R.drawable.hello);
+            }
+            else
+            {
+                holder.imageView.setImageResource(R.drawable.popcorn);
+            }
+
         }
 
         // Number of items to display
