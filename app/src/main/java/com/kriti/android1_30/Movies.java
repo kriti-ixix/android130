@@ -13,7 +13,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -64,12 +66,14 @@ public class Movies extends AppCompatActivity {
         {
             ImageView imageView;
             TextView textView;
+            LinearLayout layout;
 
             public CustomViewHolder(@NonNull View itemView) {
                 super(itemView);
                 Log.d(tag, "View Holder");
                 imageView = itemView.findViewById(R.id.customRecyclerImage);
                 textView = itemView.findViewById(R.id.customRecyclerText);
+                layout = itemView.findViewById(R.id.movieLayout);
             }
         }
 
@@ -91,14 +95,16 @@ public class Movies extends AppCompatActivity {
             holder.textView.setText(movie);
 
             if (position % 2 == 0)
-            {
                 holder.imageView.setImageResource(R.drawable.hello);
-            }
             else
-            {
                 holder.imageView.setImageResource(R.drawable.popcorn);
-            }
 
+            holder.layout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(Movies.this, movie, Toast.LENGTH_LONG).show();
+                }
+            });
         }
 
         // Number of items to display
