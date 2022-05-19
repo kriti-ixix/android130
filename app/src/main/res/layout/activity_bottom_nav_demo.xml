@@ -7,9 +7,11 @@
     tools:context=".BottomNavDemo">
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/frameLayout"/>
+        app:layout_anchor="@+id/frameLayout"
+        app:layout_anchorGravity="top|center" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:layout_width="match_parent"
