@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/bottomMenuAdd"
+        android:title="Add"
+        android:icon="@drawable/ic_baseline_add_24"/>
+
+    <item android:id="@+id/bottomMenuCamera"
+        android:title="Camera"
+        android:icon="@drawable/ic_baseline_camera_alt_24"/>
+
+    <item android:id="@+id/bottomMenuEdit"
+        android:title="Edit"
+        android:icon="@drawable/ic_baseline_edit_24"/>
+
+    <item android:id="@+id/bottomMenuProfile"
+        android:title="Profile"
+        android:icon="@drawable/ic_baseline_person_24"/>
+
+</menu>
