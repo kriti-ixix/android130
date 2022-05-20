@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 public class AddFragment extends Fragment
 {
-
     TextView textView;
 
     AddFragment() {}
