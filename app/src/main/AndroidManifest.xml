@@ -3,8 +3,8 @@
     package="com.kriti.android1_30">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -14,6 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android130"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".PositionSensor"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".UserLocation"
             android:exported="true">
@@ -25,13 +34,13 @@
         </activity>
         <activity
             android:name=".BrainTumourSystem"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".OTPAuthentication"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".APIDemo"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".NotificationDemo"
             android:exported="true">
@@ -59,43 +68,43 @@
         <activity
             android:name=".MapsActivity"
             android:exported="true"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
         <activity
             android:name=".AlertDialogDemo"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".BottomNavDemo"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".NasaData"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".UserPage"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Movies"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SplashThread"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SQLSelect"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SQLInsert"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".WeatherApp"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".GetImages"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Profile"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MenuDemo"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".StudentSignUp"
             android:exported="true" />
